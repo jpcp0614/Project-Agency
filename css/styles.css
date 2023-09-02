@@ -1,6 +1,16 @@
-h1 {
-  color: darkblue;
-  font-family: lato;
+* {
+  box-sizing: border-box;
+  font-family: "Lato";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
