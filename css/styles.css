@@ -1,3 +1,28 @@
+.btn {
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.btn:hover {
+  border-color: #FF5200;
+  color: #FF5200;
+}
+.btn-primary {
+  background-color: #FF5200;
+  border-color: #FF5200;
+}
+.btn-primary:hover {
+  background-color: transparent;
+}
+.btn-rounded {
+  border-radius: 2rem;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Lato";
@@ -11,6 +36,53 @@ a {
 
 li {
   list-style: none;
+}
+
+#main-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/office.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.nav-container {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.nav-container .brand {
+  color: #FFF;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.nav-container .brand:hover {
+  color: #FF5200;
+}
+.nav-container-navbar {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.nav-container-navbar li {
+  margin: 5px 10px;
+}
+.nav-container-navbar li a {
+  color: #FFF;
+  transition: 0.3s;
+}
+.nav-container-navbar li a:hover {
+  color: #FF5200;
+}
+.nav-container .fas.fa-bars {
+  color: #FFF;
+  display: none;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
