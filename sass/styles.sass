@@ -95,4 +95,76 @@
     
     p
       color: $text-color
+
+.jobs-container
+  background-color: $secondary-bg
+  padding: 3rem
+
+  h2
+    @extend %section-title
+
+  .jobs-list
+    display: flex
+    justify-content: space-around
+    padding: 2rem 0
+
+    .first-job
+      background-image: url('../img/job1.jpg')
+      cursor: pointer
+      height: 415px
+
+      position: relative
+      transition: .5s
+      width: 30%
+      @extend %center-bg
+      @extend %card-hover
     
+    .others-jobs-container
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      width: 60%
+
+      .job-card
+        cursor: pointer
+        height: 200px
+        margin-bottom: 2%
+        position: relative
+        width: 46%
+        @extend %center-bg
+        @extend %card-hover
+      
+      #job2
+        background-image: url('../img/job2.jpg')
+      
+      #job3
+        background-image: url('../img/job3.jpg')
+      
+      #job4
+        background-image: url('../img/job4.jpg')
+      
+      #job5
+        background-image: url('../img/job5.jpg')
+    
+    .job-card-cover
+      background-color: rgba(0, 0, 0, .6)
+      border: 3px solid $primary-color
+      height: 100%
+      left: 0
+      padding-top: 1.75rem
+      position: absolute
+      top: 0
+      width: 100%
+    
+    .job-card-title
+      color: #FFF
+      font-size: 2.2rem
+      font-weight: bold
+      text-align: center
+      transition: .5s
+    
+    .job-card-description
+      color: #FFF
+      font-size: .9rem
+      padding: 1rem
+      text-align: center

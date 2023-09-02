@@ -2,10 +2,22 @@
   text-shadow: 3px 2px #000;
 }
 
-.services-container h2 {
+.jobs-container h2, .services-container h2 {
   font-size: 3rem;
   margin-top: 2rem;
   text-align: center;
+}
+
+.jobs-container .jobs-list .others-jobs-container .job-card, .jobs-container .jobs-list .first-job {
+  background-position: center;
+  background-size: cover;
+}
+
+.jobs-container .jobs-list .others-jobs-container .job-card .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-description, .jobs-container .jobs-list .first-job .job-card-description {
+  opacity: 0;
+}
+.jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-cover, .jobs-container .jobs-list .first-job:hover .job-card-cover, .jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-title, .jobs-container .jobs-list .first-job:hover .job-card-title, .jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-description, .jobs-container .jobs-list .first-job:hover .job-card-description {
+  opacity: 1;
 }
 
 .btn {
@@ -143,6 +155,72 @@ li {
 }
 .services-container .services-card p {
   color: #36383b;
+}
+
+.jobs-container {
+  background-color: #E5EAFF;
+  padding: 3rem;
+}
+.jobs-container .jobs-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+.jobs-container .jobs-list .first-job {
+  background-image: url("../img/job1.jpg");
+  cursor: pointer;
+  height: 415px;
+  position: relative;
+  transition: 0.5s;
+  width: 30%;
+}
+.jobs-container .jobs-list .others-jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+}
+.jobs-container .jobs-list .others-jobs-container .job-card {
+  cursor: pointer;
+  height: 200px;
+  margin-bottom: 2%;
+  position: relative;
+  width: 46%;
+}
+.jobs-container .jobs-list .others-jobs-container #job2 {
+  background-image: url("../img/job2.jpg");
+}
+.jobs-container .jobs-list .others-jobs-container #job3 {
+  background-image: url("../img/job3.jpg");
+}
+.jobs-container .jobs-list .others-jobs-container #job4 {
+  background-image: url("../img/job4.jpg");
+}
+.jobs-container .jobs-list .others-jobs-container #job5 {
+  background-image: url("../img/job5.jpg");
+}
+.jobs-container .jobs-list .job-card-cover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid #FF5200;
+  height: 100%;
+  left: 0;
+  padding-top: 1.75rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.jobs-container .jobs-list .job-card-title {
+  color: #FFF;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+}
+.jobs-container .jobs-list .job-card-description {
+  color: #FFF;
+  font-size: 0.9rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
