@@ -1,3 +1,7 @@
+#main-banner .title-container h1, #main-banner .title-container h2 {
+  text-shadow: 3px 2px #000;
+}
+
 .btn {
   border: 1px solid #FFF;
   border-radius: 5px;
@@ -44,8 +48,7 @@ li {
   background-size: cover;
   height: 85vh;
 }
-
-.nav-container {
+#main-banner .nav-container {
   background-color: #000;
   display: flex;
   justify-content: space-between;
@@ -56,33 +59,48 @@ li {
   width: 100%;
   z-index: 10;
 }
-.nav-container .brand {
+#main-banner .nav-container .brand {
   color: #FFF;
   font-size: 2rem;
   transition: 0.3s;
 }
-.nav-container .brand:hover {
+#main-banner .nav-container .brand:hover {
   color: #FF5200;
 }
-.nav-container-navbar {
+#main-banner .nav-container-navbar {
   align-items: center;
   display: flex;
   height: 100%;
 }
-.nav-container-navbar li {
+#main-banner .nav-container-navbar li {
   margin: 5px 10px;
 }
-.nav-container-navbar li a {
+#main-banner .nav-container-navbar li a {
   color: #FFF;
   transition: 0.3s;
 }
-.nav-container-navbar li a:hover {
+#main-banner .nav-container-navbar li a:hover {
   color: #FF5200;
 }
-.nav-container .fas.fa-bars {
+#main-banner .nav-container .fas.fa-bars {
   color: #FFF;
   display: none;
   font-size: 2rem;
+}
+#main-banner .title-container {
+  align-items: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+#main-banner .title-container h2 {
+  font-size: 3rem;
+}
+#main-banner .title-container h1 {
+  font-size: 4rem;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
