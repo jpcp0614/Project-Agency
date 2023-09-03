@@ -18,6 +18,17 @@
   &:hover
     color: $primary-color
 
+// MIXIN para MOBILE
+@mixin mobile
+  @media (max-width: 425px)
+    @content // o conteúdo desse mixin "vem pra cá"
+
+@mixin card-mobile
+  height: 200px
+  margin-bottom: 2rem
+  width: 100%
+
+
 // PLACEHOLDERS SELECTORS
 %title-text-shadow
   text-shadow: 3px 2px $black
@@ -34,6 +45,8 @@
 %card-hover
   .job-card-cover, .job-card-title, .job-card-description
     opacity: 0
+    @include mobile
+      opacity: 1
   &:hover
     .job-card-cover, .job-card-title, .job-card-description
       opacity: 1

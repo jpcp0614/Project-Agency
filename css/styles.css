@@ -16,6 +16,11 @@
 .jobs-container .jobs-list .others-jobs-container .job-card .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-description, .jobs-container .jobs-list .first-job .job-card-description {
   opacity: 0;
 }
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .others-jobs-container .job-card .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title, .jobs-container .jobs-list .others-jobs-container .job-card .job-card-description, .jobs-container .jobs-list .first-job .job-card-description {
+    opacity: 1;
+  }
+}
 .jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-cover, .jobs-container .jobs-list .first-job:hover .job-card-cover, .jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-title, .jobs-container .jobs-list .first-job:hover .job-card-title, .jobs-container .jobs-list .others-jobs-container .job-card:hover .job-card-description, .jobs-container .jobs-list .first-job:hover .job-card-description {
   opacity: 1;
 }
@@ -67,6 +72,16 @@ li {
   background-size: cover;
   height: 85vh;
 }
+@media (max-width: 425px) {
+  #main-banner {
+    height: 100vh;
+  }
+}
+@media (max-width: 425px) {
+  #main-banner nav {
+    display: none;
+  }
+}
 #main-banner .nav-container {
   background-color: #000;
   display: flex;
@@ -77,6 +92,11 @@ li {
   top: 0;
   width: 100%;
   z-index: 10;
+}
+@media (max-width: 425px) {
+  #main-banner .nav-container {
+    padding: 1rem;
+  }
 }
 #main-banner .nav-container .brand {
   color: #FFF;
@@ -106,6 +126,11 @@ li {
   display: none;
   font-size: 2rem;
 }
+@media (max-width: 425px) {
+  #main-banner .nav-container .fas.fa-bars {
+    display: block;
+  }
+}
 #main-banner .title-container {
   align-items: center;
   color: #FFF;
@@ -113,6 +138,12 @@ li {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+@media (max-width: 425px) {
+  #main-banner .title-container {
+    padding: 2rem;
+    text-align: center;
+  }
 }
 #main-banner .title-container h2 {
   font-size: 3rem;
@@ -133,12 +164,23 @@ li {
   justify-content: space-around;
   padding: 2rem;
 }
+@media (max-width: 425px) {
+  .services-container .services-card-container {
+    padding: 2rem 0;
+  }
+}
 .services-container .services-card {
   border: 1px solid #CCC;
   margin: 1%;
   padding: 2rem;
   transition: 0.3s;
   width: 30%;
+}
+@media (max-width: 425px) {
+  .services-container .services-card {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
 }
 .services-container .services-card:hover {
   border-color: transparent;
@@ -162,10 +204,20 @@ li {
   background-color: #E5EAFF;
   padding: 3rem;
 }
+@media (max-width: 425px) {
+  .jobs-container {
+    padding: 2rem;
+  }
+}
 .jobs-container .jobs-list {
   display: flex;
   justify-content: space-around;
   padding: 2rem 0;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list {
+    flex-direction: column;
+  }
 }
 .jobs-container .jobs-list .first-job {
   background-image: url("../img/job1.jpg");
@@ -175,11 +227,24 @@ li {
   transition: 0.5s;
   width: 30%;
 }
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .first-job {
+    height: 200px;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
 .jobs-container .jobs-list .others-jobs-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 60%;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .others-jobs-container {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .jobs-container .jobs-list .others-jobs-container .job-card {
   cursor: pointer;
@@ -187,6 +252,13 @@ li {
   margin-bottom: 2%;
   position: relative;
   width: 46%;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .others-jobs-container .job-card {
+    height: 200px;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
 }
 .jobs-container .jobs-list .others-jobs-container #job2 {
   background-image: url("../img/job2.jpg");
@@ -235,6 +307,12 @@ footer .footer-container {
   margin: 0 auto;
   max-width: 1200px;
 }
+@media (max-width: 425px) {
+  footer .footer-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
 footer .footer-container .footer-title {
   color: #FFF;
   font-weight: bold;
@@ -243,14 +321,33 @@ footer .footer-container .footer-title {
 footer .footer-desc-container, footer .footer-links-container {
   width: 50%;
 }
+@media (max-width: 425px) {
+  footer .footer-desc-container, footer .footer-links-container {
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
 footer .footer-desc-container p {
   line-height: 1.3rem;
   width: 80%;
 }
+@media (max-width: 425px) {
+  footer .footer-desc-container p {
+    width: 100%;
+  }
+}
 footer .footer-links-container {
   display: flex;
 }
+@media (max-width: 425px) {
+  footer .footer-links-container {
+    flex-direction: column;
+    margin: 0;
+  }
+}
 footer .footer-links-container-list {
+  margin-bottom: 2rem;
   padding: 0 1rem;
 }
 footer .footer-links-container-list li {
@@ -265,6 +362,11 @@ footer .footer-links-container-list li a:hover {
 footer .footer-copy-right-container {
   margin-top: 3rem;
   width: 100%;
+}
+@media (max-width: 425px) {
+  footer .footer-copy-right-container {
+    text-align: center;
+  }
 }
 footer .footer-copy-right-container p {
   margin-bottom: 1rem;

@@ -8,6 +8,12 @@
   background-position: center
   background-size: cover
   height: 85vh
+  @include mobile
+    height: 100vh
+
+  nav
+    @include mobile
+      display: none
 
   .nav-container
     background-color: $black
@@ -19,6 +25,8 @@
     top: 0
     width: 100%
     z-index: 10
+    @include mobile
+      padding: 1rem
 
     .brand
       color: $light-color
@@ -41,6 +49,8 @@
       color: #FFF
       display: none
       font-size: 2rem
+      @include mobile
+        display: block
   
   .title-container
     align-items: center
@@ -49,6 +59,9 @@
     flex-direction: column
     justify-content: center
     height: 100%
+    @include mobile
+      padding: 2rem
+      text-align: center
 
     h2
       font-size: 3rem
@@ -72,6 +85,8 @@
     flex-wrap: wrap
     justify-content: space-around
     padding: 2rem
+    @include mobile
+      padding: 2rem 0
 
   .services-card
     border: 1px solid #CCC
@@ -79,6 +94,9 @@
     padding: 2rem
     transition: .3s
     width: 30%
+    @include mobile
+      margin-bottom: 2rem
+      width: 100%
     &:hover
       border-color: transparent
       box-shadow: 0 1px 10px #CCC
@@ -99,6 +117,8 @@
 .jobs-container
   background-color: $secondary-bg
   padding: 3rem
+  @include mobile
+    padding: 2rem
 
   h2
     @extend %section-title
@@ -107,23 +127,29 @@
     display: flex
     justify-content: space-around
     padding: 2rem 0
+    @include mobile
+      flex-direction: column
 
     .first-job
       background-image: url('../img/job1.jpg')
       cursor: pointer
       height: 415px
-
       position: relative
       transition: .5s
       width: 30%
       @extend %center-bg
       @extend %card-hover
+      @include mobile
+        @include card-mobile
     
     .others-jobs-container
       display: flex
       flex-wrap: wrap
       justify-content: space-around
       width: 60%
+      @include mobile
+        flex-direction: column
+        width: 100%
 
       .job-card
         cursor: pointer
@@ -133,6 +159,8 @@
         width: 46%
         @extend %center-bg
         @extend %card-hover
+        @include mobile
+          @include card-mobile
       
       #job2
         background-image: url('../img/job2.jpg')
@@ -179,6 +207,9 @@ footer
     flex-wrap: wrap
     margin: 0 auto
     max-width: 1200px
+    @include mobile
+      flex-direction: column
+      max-width: 100%
 
     .footer-title
       color: #FFF
@@ -187,16 +218,26 @@ footer
 
   .footer-desc-container, .footer-links-container
     width: 50%
+    @include mobile
+      margin-bottom: 2rem
+      text-align: center
+      width: 100%
   
   .footer-desc-container
     p
       line-height: 1.3rem
       width: 80%
+      @include mobile
+        width: 100%
 
   .footer-links-container
     display: flex
+    @include mobile
+      flex-direction: column
+      margin: 0
 
     &-list
+      margin-bottom: 2rem
       padding: 0 1rem
 
       li
@@ -211,6 +252,8 @@ footer
   .footer-copy-right-container
     margin-top: 3rem
     width: 100%
+    @include mobile
+      text-align: center
 
     p
       margin-bottom: 1rem
