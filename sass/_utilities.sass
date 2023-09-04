@@ -1,0 +1,75 @@
+// MIXINS
+@mixin reset
+  *
+    box-sizing: border-box
+    font-family: 'Lato'
+    margin: 0
+    padding: 0
+  
+  a
+    text-decoration: none
+    color: $text-color
+  
+  li
+    list-style: none
+
+@mixin main-hover
+  transition: .3s
+  &:hover
+    color: $primary-color
+
+// MIXIN para MOBILE
+@mixin mobile
+  @media (max-width: 425px)
+    @content // o conteúdo desse mixin "vem pra cá"
+
+@mixin card-mobile
+  height: 200px
+  margin-bottom: 2rem
+  width: 100%
+
+
+// PLACEHOLDERS SELECTORS
+%title-text-shadow
+  text-shadow: 3px 2px $black
+
+%section-title
+  font-size: 3rem
+  margin-top: 2rem
+  text-align: center
+
+%center-bg
+  background-position: center
+  background-size: cover
+
+%card-hover
+  .job-card-cover, .job-card-title, .job-card-description
+    opacity: 0
+    @include mobile
+      opacity: 1
+  &:hover
+    .job-card-cover, .job-card-title, .job-card-description
+      opacity: 1
+
+// BOTÕES
+.btn
+  border: 1px solid $light-color
+  border-radius: 5px
+  color: $light-color
+  padding: .6rem 1rem
+  text-transform: uppercase
+  transition: .3s
+  &:hover
+    border-color: $primary-color
+    color: $primary-color
+  
+  &-primary
+    background-color: $primary-color
+    border-color: $primary-color
+    &:hover
+      background-color: transparent
+  
+  &-rounded
+    border-radius: 2rem
+    margin-top: 1rem
+    padding: 1rem 1.5rem
